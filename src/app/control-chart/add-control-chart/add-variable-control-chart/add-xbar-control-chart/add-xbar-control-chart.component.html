@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add X-Bar Control Chart</title>
+  <link rel="stylesheet" href="./add-xbar-control-chart.component.css">
+</head>
+<body>
+
+<div class="control-chart-section">
+  <h2>Add X-Bar Control Chart</h2>
+
+  <div class="p-field">
+    <label for="title">Title</label>
+    <input id="title" type="text" pInputText [(ngModel)]="controlChart.title" />
+  </div>
+
+  <div class="p-field">
+    <label for="usl">Upper Security Limit (USL)</label>
+    <input id="usl" type="number" pInputText [(ngModel)]="controlChart.upperSecurityLimit" />
+  </div>
+
+  <div class="p-field">
+    <label for="lsl">Lower Security Limit (LSL)</label>
+    <input id="lsl" type="number" pInputText [(ngModel)]="controlChart.lowerSecurityLimit" />
+  </div>
+
+  <div class="echantillons-section">
+    <h3>Echantillons</h3>
+    <ul>
+      <li *ngFor="let echantillon of controlChart.echantillons" class="echantillon-item">
+        <span>Echantillon {{ echantillon.id }}</span>
+        <ul>
+          <li *ngFor="let measurement of echantillon.measurements">{{ measurement.value }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="p-field add-measurement-section">
+    <h3>Add Measurement to New Echantillon</h3>
+    <input type="number" pInputText [(ngModel)]="newMeasurementValue" placeholder="Measurement Value" />
+    <button pButton type="button" label="Add Measurement" (click)="addMeasurementToEchantillon()"></button>
+  </div>
+
+  <div class="actions">
+    <button pButton type="button" label="Add Echantillon" (click)="addEchantillon()"></button>
+    <button pButton type="button" label="Save Control Chart" (click)="saveControlChart()"></button>
+  </div>
+</div>
+
+</body>
+</html>

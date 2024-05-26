@@ -1,0 +1,140 @@
+.breadcrumb-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+.breadcrumbs li {
+  margin-right: 10px;
+}
+
+.breadcrumbs a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.control-chart-section {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.control-chart-section h2 {
+  color: #333;
+}
+
+.p-field {
+  margin-bottom: 20px;
+}
+
+.p-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.p-field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.echantillons-section {
+  margin-top: 20px;
+}
+
+.echantillons-section h3 {
+  color: #333;
+}
+
+.echantillon-item {
+  margin-bottom: 15px;
+}
+
+.echantillon-item span {
+  font-weight: bold;
+  color: #333;
+}
+
+.echantillon-item ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.echantillon-item ul li {
+  list-style: none;
+}
+
+.actions {
+  display: flex;
+  margin-top: 10px;
+}
+
+.actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+
+.actions button:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.add-echantillon-section {
+  margin-top: 20px;
+}
+
+.add-echantillon-section h3 {
+  color: #333;
+}
+
+.add-echantillon-section label {
+  color: #333;
+}
+
+.add-echantillon-section ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.add-echantillon-section ul li {
+  list-style: none;
+}
+
+button[pButton] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button[pButton][icon="pi pi-pencil"] {
+  background-color: #ffc107;
+}
+
+button[pButton][icon="pi pi-trash"] {
+  background-color: #dc3545;
+}

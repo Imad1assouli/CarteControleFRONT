@@ -1,0 +1,88 @@
+.control-chart-section {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.control-chart-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.p-field {
+  margin-bottom: 20px;
+}
+
+.p-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.p-field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.echantillons-section {
+  margin-top: 20px;
+}
+
+.echantillons-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.echantillons-section ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.echantillons-section ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.echantillon-item span {
+  font-weight: bold;
+  color: #333;
+}
+
+.add-measurement-section {
+  margin-top: 20px;
+}
+
+.add-measurement-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-measurement-section input {
+  width: calc(100% - 140px);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.actions button:nth-last-child(1) {
+  margin-right: 0;
+}

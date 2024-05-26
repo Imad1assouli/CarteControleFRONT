@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Control Chart</title>
+  <link rel="stylesheet" href="./graph.component.css">
+</head>
+<body>
+<div class="control-chart-section">
+  <h2>{{ controlChart?.title }}</h2>
+  <div id="chart" class="chart-container"></div>
+  <div *ngIf="controlChart">
+    <div class="normality-test-section">
+      <h3>Normality Test (Droit d'Henry)</h3>
+      <p>P-Value: {{ controlChart.normalityTestPValue }}</p>
+    </div>
+    <div class="cp-section" *ngIf="controlChart.cp !== undefined">
+      <p>Cp: {{ controlChart.cp }}</p>
+      <p>Cpk: {{ controlChart.cpk }}</p>
+      <p>Cm: {{ controlChart.cm }}</p>
+      <p>Cmk: {{ controlChart.cmk }}</p>
+    </div>
+    <div class="interpretations-section" *ngIf="controlChart.interpretations?.length">
+      <h3>Interpretations</h3>
+      <ul>
+        <li *ngFor="let interpretation of controlChart.interpretations">{{ interpretation }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

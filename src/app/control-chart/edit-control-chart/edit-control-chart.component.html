@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Control Chart</title>
+  <link rel="stylesheet" href="./edit-control-chart.component.css">
+</head>
+<body>
+<div class="control-chart-section" *ngIf="controlChart">
+  <h2>Edit Control Chart: {{ controlChart.title }}</h2>
+
+  <div class="p-field">
+    <label for="title">Title</label>
+    <input id="title" type="text" pInputText [(ngModel)]="controlChart.title" />
+  </div>
+
+  <div class="echantillons-section">
+    <h3>Echantillons</h3>
+    <ul>
+      <li *ngFor="let echantillon of controlChart.echantillons" class="echantillon-item">
+        <span>Echantillon {{ echantillon.id }}</span>
+        <ul>
+          <li *ngFor="let measurement of echantillon.measurements">{{ measurement.value }}</li>
+        </ul>
+        <div class="actions">
+          <button pButton type="button" icon="pi pi-pencil" (click)="editEchantillon(echantillon)"></button>
+          <button *ngIf="echantillon.id" pButton type="button" icon="pi pi-trash" (click)="deleteEchantillon(echantillon.id)"></button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="p-field add-echantillon-section">
+    <h3>Add Echantillon</h3>
+    <div class="p-field">
+      <label for="measurementValue">Measurement Value</label>
+      <input id="measurementValue" type="number" pInputText [(ngModel)]="newMeasurementValue" />
+      <button pButton type="button" label="Add Measurement to New Echantillon" (click)="addMeasurementToEchantillon(newEchantillon)"></button>
+    </div>
+
+    <div class="p-field">
+      <label>Measurements in New Echantillon</label>
+      <ul>
+        <li *ngFor="let measurement of newEchantillon.measurements">{{ measurement.value }}</li>
+      </ul>
+    </div>
+
+    <button pButton type="button" label="Add Echantillon" (click)="addEchantillon()"></button>
+  </div>
+
+  <button pButton type="button" label="Save" (click)="saveControlChart()"></button>
+</div>
+</body>
+</html>

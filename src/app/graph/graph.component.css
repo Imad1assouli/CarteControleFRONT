@@ -1,0 +1,88 @@
+.breadcrumb-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+.breadcrumbs li {
+  margin-right: 10px;
+}
+
+.breadcrumbs a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.control-chart-section {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.control-chart-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.normality-test-section {
+  margin-bottom: 20px;
+}
+
+.normality-test-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.normality-test-section p {
+  color: #666;
+}
+
+.cp-section {
+  margin-bottom: 20px;
+}
+
+.cp-section p {
+  color: #666;
+}
+
+.interpretations-section {
+  margin-top: 20px;
+}
+
+.interpretations-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.interpretations-section ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.interpretations-section ul li {
+  list-style: none;
+  color: #666;
+}

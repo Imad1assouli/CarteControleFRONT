@@ -1,0 +1,16 @@
+<div class="p-fluid">
+  <div class="p-field">
+    <label for="measurementValue">Measurement Value</label>
+    <input id="measurementValue" type="number" pInputText [(ngModel)]="measurementValue" />
+    <button pButton type="button" label="Add Measurement" (click)="addMeasurement()"></button>
+  </div>
+
+  <div class="p-field">
+    <label>Measurements</label>
+    <ul>
+      <li *ngFor="let measurement of echantillon.measurements">{{ measurement.value }}</li>
+    </ul>
+  </div>
+
+  <button pButton type="button" label="Save Echantillon" (click)="saveEchantillon()"></button>
+</div>
